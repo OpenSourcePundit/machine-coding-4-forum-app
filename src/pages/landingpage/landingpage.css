@@ -7,7 +7,7 @@
     width: 100%;
     max-width:100% ; 
     grid-gap:.02rem;
-    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr 10fr;
     grid-template-areas:
     "header header header"
@@ -35,6 +35,18 @@
     background-color: blanchedalmond;
       grid-area: main;
       padding-left: .5rem;
+      display: flex;
+      flex-direction: column;
     }
+    .post-heading{
+        padding: 1rem;
+        background-color: bisque;
+        text-align: left;
+    }
+    .post-box{
+        padding:.5rem;
+        background-color: aliceblue;
+    }
+
   
   

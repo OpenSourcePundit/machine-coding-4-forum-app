@@ -1,0 +1,48 @@
+.post-container{
+    width: 100%;
+    display: flex;
+    margin-top: 1rem;
+    background-color:white;
+
+}
+.upvote-box{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+.upvote-control{
+    cursor: pointer;
+}
+.main-box{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: .5rem;
+    text-align: left;
+}
+.top-bx{
+
+}
+.post-bx{
+    font-weight: bold;
+    font-size: medium;
+    font-size:larger;
+    overflow-wrap: normal;
+}
+.tags-bx{
+    overflow-wrap: normal;
+
+}
+.desc-bx{
+    overflow-wrap: normal;
+}
+.button-bx{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.buttons{
+    padding: .5rem;
+    cursor: pointer;
+
+}

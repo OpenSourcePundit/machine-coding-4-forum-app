@@ -1,0 +1,14 @@
+.sidebar2{
+    display: flex;
+    flex-direction: column;
+}
+.main-div{
+    background-color: brown;
+    padding: 10px;
+    padding-bottom: 0%;
+}
+.sortby{
+    padding:1rem;
+    cursor: pointer;
+    background-color: white;
+}

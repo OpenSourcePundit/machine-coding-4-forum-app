@@ -65,6 +65,8 @@ export const MainProvider = ({children}) =>{
             picUrl: forumData.picUrl,
             posts: forumData.posts,
             posts: forumData.posts,
+            forumData,
+            setForumData,
         }}>
             {children}
         </MainContext.Provider>

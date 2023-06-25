@@ -5,6 +5,8 @@ export const MainContext = createContext();
 
 export const MainProvider = ({children}) =>{
 
+
+    const [sortBy,setSortBy] = useState("");
     const [forumData,setForumData] = useState({
         accountId: '98767-888-78767',
         username: 'tanaypratap',
@@ -31,7 +33,7 @@ export const MainProvider = ({children}) =>{
                 likes: 0,
                 comment: 'Interested',
                 createdAt: '2023-06-24T12:01:00Z',
-              },
+              }
             ],
             isBookmarked: false,
           },
@@ -54,6 +56,7 @@ export const MainProvider = ({children}) =>{
       });
 
     useEffect(()=>{
+      setSortBy("latest");
       setForumData({
         accountId: '98767-888-78767',
         username: 'tanaypratap',
@@ -80,7 +83,16 @@ export const MainProvider = ({children}) =>{
                 likes: 0,
                 comment: 'Interested',
                 createdAt: '2023-06-24T12:01:00Z',
-              },
+              }
+              ,
+              {
+                commentId: '89898-856-87576',
+                username: 'ashwin4real',
+                picUrl: 'http://bit.ly/42Zm7tM',
+                likes: 0,
+                comment: 'Interested',
+                createdAt: '2023-06-24T12:01:00Z',
+              }
             ],
             isBookmarked: false,
           },
@@ -96,7 +108,15 @@ export const MainProvider = ({children}) =>{
             downvotes: 0,
             tags: ['html', 'javascript', 'web development'],
             createdAt: '2023-06-24T12:54:00Z',
-            comments: [],
+            comments: [
+                {
+                  commentId: '89898-856-87576',
+                  username: 'ashwin4real',
+                  picUrl: 'http://bit.ly/42Zm7tM',
+                  likes: 0,
+                  comment: 'Interested not hehehehe',
+                  createdAt: '2023-06-24T12:01:00Z',
+                }],
             isBookmarked: false,
           },
         ],
@@ -113,6 +133,7 @@ export const MainProvider = ({children}) =>{
             posts: forumData.posts,
             forumData: forumData,
             setForumData:setForumData,
+            sortBy,setSortBy
         }}>
             {children}
         </MainContext.Provider>

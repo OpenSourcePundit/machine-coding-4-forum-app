@@ -5,8 +5,7 @@
       /* min-height: 100vh; */
     height: 100%;
     width: 100%;
-    max-width:100% ; 
-    grid-gap:.02rem;
+    max-width:100% ;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: 1fr 10fr;
     grid-template-areas:
@@ -19,20 +18,20 @@
       grid-area: header;
     }
     
-    aside1 {
+    .sidebar1 {
       grid-area: aside1;
-      width: max-content;
-      background-color: lynx-gray-color;
+      width: 100%;
+      background-color: rgb(219, 218, 218);
     }
     
-    aside2 {
+    .sidebar2 {
       grid-area: aside2;
       min-height: 200px;
       height: max-content;
     }
     
    main {
-    background-color: blanchedalmond;
+    background-color: rgb(219, 218, 218);
       grid-area: main;
       padding-left: .5rem;
       display: flex;
@@ -40,12 +39,14 @@
     }
     .post-heading{
         padding: 1rem;
-        background-color: bisque;
+        background-color: rgb(219, 218, 218);
         text-align: left;
+        font-size: 1.5rem;
+        font-weight: 700;
     }
     .post-box{
         padding:.5rem;
-        background-color: aliceblue;
+        background-color: rgb(219, 218, 218);
     }
 
   

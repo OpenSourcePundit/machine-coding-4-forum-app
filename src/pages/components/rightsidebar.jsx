@@ -1,17 +1,20 @@
 import "./rightsidebar.css";
+import {useContext, useState} from "react";
+import { MainContext } from "../../context/maincontext";
 
 export const RightSideBar = () =>{
+    const {sortBy,setSortBy} = useContext(MainContext);
 
     return(
-        <aside2 className="sidebar2">
+        <div className="sidebar2">
             <div className="main-div">
                 SortBy:
             </div>
             <div className="main-div">
                 <div className="sortby">
-                    latestpost
+                    {sortBy==="latest"?"Show Trending Posts":"Show Latest Posts"}
                 </div>
             </div>
-        </aside2>
+        </div>
     )
 }

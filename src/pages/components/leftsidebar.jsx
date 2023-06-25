@@ -4,7 +4,7 @@ import "./leftsidebar.css";
 export const LeftSideBar = () =>{
 
     return(
-        <aside1 className="sidebar">
+        <div className="sidebar1">
         <div className="nav-wrapper">
           <div className="pt-s black-color fw-semibold link-wrap">
             <Link className="link" to="../">                
@@ -40,6 +40,6 @@ export const LeftSideBar = () =>{
       </div>
       <div className="grey-color fw-bold">...</div>          
     </div>
-    </aside1>
+    </div>
     )
 }

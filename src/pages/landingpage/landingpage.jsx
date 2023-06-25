@@ -9,7 +9,7 @@ import { RightSideBar } from "../components/rightsidebar";
 import { Post } from "../components/post/post";
 
 export const LandingPage =() =>{
-    let {posts} = useContext(MainContext);
+    let {posts,sortBy} = useContext(MainContext);
 
     return(
         <div className="container">
@@ -17,10 +17,10 @@ export const LandingPage =() =>{
             <LeftSideBar/>
             <main className="main">
                 <div className="post-heading">
-                    LAtestPost
+                    {sortBy==="latest"?"LatestPosts":"Trending Posts"}
                 </div>
                 <div className="post-box">
-                    {posts.map((post)=> <Post post={post}/>)}
+                    {posts.map((post)=> <Post post={post} key={post.postId} />)}
 
                 </div>
             </main>

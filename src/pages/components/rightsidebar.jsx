@@ -11,7 +11,7 @@ export const RightSideBar = () =>{
                 SortBy:
             </div>
             <div className="main-div">
-                <div className="sortby">
+                <div className="sortby" onClick={()=>{sortBy=="latest"?setSortBy("trending"):setSortBy("latest")}}>
                     {sortBy==="latest"?"Show Trending Posts":"Show Latest Posts"}
                 </div>
             </div>

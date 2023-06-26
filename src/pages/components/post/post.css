@@ -1,9 +1,15 @@
 .post-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;    
+    background-color:white;
+    border-radius: 10px;
+}
+.post-section{
     width: 100%;
     display: flex;
     margin-top: 1rem;
-    background-color:white;
-    border-radius: 10px;
+
 }
 
 .upvote-box{

@@ -16,7 +16,6 @@ export const PostPage = () =>{
 
     return(
         <div className="container">
-            {console.log("container")}
             <NavBar/>
             <LeftSideBar/>
             <main className="main">

@@ -1,6 +1,7 @@
 import "./post.css";
 import {useContext} from "react";
 import { MainContext } from "../../../context/maincontext";
+import { Comment } from "./comment";
 import {useNavigate} from "react-router-dom"
 
 export const Post = ({post,page}) =>{
@@ -31,7 +32,7 @@ export const Post = ({post,page}) =>{
 
     return(
         <div  className="post-container">
-            {console.log("postme:",post)}
+            <div className="post-section">
             <div className="upvote-box">
                 <div className="upvote-control" ><i onClick={()=>handleUpvote("increase")} className="bi bi-caret-up-fill"></i></div>
                 <div className="upvote-value">  {post.upvotes} </div>
@@ -60,12 +61,13 @@ export const Post = ({post,page}) =>{
                 </div>
                 <br/>
                 <div className="button-bx">
-                    <div className="buttons"><i onClick={()=>{navigate(`./post/${post.postId}`)}} className="bi bi-chat-dots"></i>  {post.comments.length}  </div>
+                    <div className="buttons"><i onClick={()=>{if(page===undefined){navigate(`./post/${post.postId}`)}}} className="bi bi-chat-dots"></i>  {post.comments.length}  </div>
                     <div className="buttons"><i className="bi bi-share-fill"></i></div>
                     <div className="buttons"><i onClick={()=>bookmarkHandler()} className={post.isBookmarked?"bi bi-bookmark-fill":"bi bi-bookmark"}></i></div>
-
                 </div>
             </div>
+            </div>
+           { page==="post" ? <Comment comments={post.comments}/> : <></>}
 
         </div>
     )
